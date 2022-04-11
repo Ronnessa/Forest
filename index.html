@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Forest to najpiękniejszy park w Polsce, miłe chwile spędzają w nim miłośnicy przyrody. Zaplanuj wycieczkę z rodziną i odpocznij od miejskiego zgiełku już dziś.">
+    <meta name="keywords" content="park, wycieczka, rodzina, zwierzęta, przyroda">
+    <title>Forest - najpiękniejszy park w Twojej okolicy.</title>
+    <link rel="stylesheet" href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <nav class="nav nav__mobile nav__container">
+        <p><img class='nav__logo-img' src="./img/christmas-tree.svg" alt="">Forest</p>
+        <button id="nav-btn" class="nav__button">
+            <i id="nav-icon" class="ti ti-menu-2"></i>
+        </button>
+
+        <div id="nav-mobile" class="nav__items">
+            <a href="index.html" class="link">Home</a>
+            <a href="#aboutus" class="link">O nas</a>
+            <a href="#offer" class="link">Oferta</a>
+            <a href="kontakt.html" class="link">Kontakt</a>
+        </div>
+    </nav>
+    <nav class="nav nav__desktop">
+        <div class="wrapper nav__container">
+            <p class="nav__logo-desktop"><img class='nav__logo-img' src="./img/christmas-tree.svg" alt="">Forest</p>
+            <div>
+                <a href="#" class="nav__link nav__current link ">Home</a>
+                <a href="#aboutus" class="nav__link link">O nas</a>
+                <a href="#offer" class="nav__link link">Oferta</a>
+                <a href="kontakt.html" class="nav__link link">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+    <header id="header">
+        <div class="header-img">
+            <div class="header-img__shadow"></div>
+            <div class="header-img__text">
+                <p>Forest Group</p>
+                <h1>Najpiękniejszy park w Twojej okolicy!</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="aboutus" class="section">
+            <div class="wrapper">
+                <h2 class="section__heading">O nas</h2>
+                <div class="about-us__container">
+                    <img class="about-us__img" src="./img/waters.jpg" alt="wysepka na jeziorze w lesie">
+                    <div class="about-us__text">
+                        <h3>Niezapomniane przygody</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vitae rerum nobis! Ad ipsa
+                            praesentium fuga harum quidem tenetur nemo et, quibusdam vero eos id repellat explicabo
+                            necessitatibus accusamus, cupiditate eligendi voluptatibus deserunt in eius ullam libero
+                            ducimus dolores. Ea, rem vero incidunt earum labore facilis fugit natus quisquam voluptas.
+                            <a href="https://mmcschool.pl/" target="_blank" rel="noopener noreferrer"
+                                class="link">www.MMCSchool.pl</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="hero-img">
+                <div class="hero-img__shadow"></div>
+                <div class="hero-img__text">
+                    <p>Przygoda dla całej rodziny</p>
+                </div>
+            </div>
+        </section>
+        <section id="offer" class="section">
+            <div class="wrapper">
+                <h2 class="section__heading">Oferta</h2>
+                <p class="offer__text">Wybierz jedną z naszych wspaniałych ofert!</p>
+                <div class="offer__container">
+                    <div class="offer__card">
+                        <p class="card card__heading">Demo</p>
+                        <p class="card card__price">$0</p>
+                        <div class="card card__text">
+                            <p><i class="ti ti-check"></i>opcja w pakiecie</p>
+                            <p><i class="ti ti-check"></i>opcja w pakiecie</p>
+                            <p class="card__text--grey"><i class="ti ti-minus"></i> opcja poza pakietem</p>
+                            <p class="card__text--grey"><i class="ti ti-minus"></i> opcja poza pakietem</p>
+                            <p class="card__text--grey"><i class="ti ti-minus"></i> opcja poza pakietem</p>
+                        </div>
+
+                        <button class="card__btn">Wybierz</button>
+                    </div>
+                    <div class="offer__card">
+                        <p class="card card__heading">Standard</p>
+                        <p class="card card__price">$99</p>
+                        <div class="card card__text">
+                            <p><i class="ti ti-check"></i>opcja w pakiecie</p>
+                            <p><i class="ti ti-check"></i>opcja w pakiecie</p>
+                            <p><i class="ti ti-check"></i> opcja w pakiecie</p>
+                            <p class="card__text--grey"><i class="ti ti-minus"></i> opcja poza pakietem</p>
+                            <p class="card__text--grey"><i class="ti ti-minus"></i> opcja poza pakietem</p>
+                        </div>
+
+                        <button class="card__btn card__btn--green">Wybierz</button>
+                    </div>
+                    <div class="offer__card">
+                        <p class="card card__heading">Permieum</p>
+                        <p class="card card__price">$299</p>
+                        <div class="card card__text">
+                            <p><i class="ti ti-check"></i>opcja w pakiecie</p>
+                            <p><i class="ti ti-check"></i>opcja w pakiecie</p>
+                            <p><i class="ti ti-check"></i> opcja w pakiecie</p>
+                            <p><i class="ti ti-check"></i> opcja w pakiecie</p>
+                            <p><i class="ti ti-check"></i> opcja w pakiecie</p>
+                        </div>
+
+                        <button class="card__btn">Wybierz</button>
+                    </div>
+                </div>
+                <p class="offer__text">Szukasz czegoś innego? Sprawdź nasze pozostałe <a href="oferta.html"
+                        class="link link--green"> oferty</a>.</p>
+            </div>
+
+        </section>
+        <section class="section section--links">
+            <div class="wrapper links__container">
+                <p class="links__logo"><img src="./img/christmas-tree.svg" alt="">Forest</p>
+                <div class="links__box">
+                    <h3 class="links__heading">O nas</h3>
+                    <p class="links__text"><a href="#" class="link">Historia</a></p>
+                    <p class="links__text"><a href="#" class="link">Parki</a></p>
+                    <p class="links__text"><a href="#" class="link">Opinie</a></p>
+                </div>
+                <div class="links__box">
+                    <h3 class="links__heading">Nasza firma</h3>
+                    <p class="links__text"><a href="#" class="link">Praca</a></p>
+                    <p class="links__text"><a href="#" class="link">Kadry</a></p>
+                    <p class="links__text"><a href="#" class="link">Zarząd</a></p>
+                </div>
+                <div class="links__box">
+                    <h3 class="links__heading">Dokumenty</h3>
+                    <p class="links__text"><a href="#" class="link">Wnioski</a></p>
+                    <p class="links__text"><a href="#" class="link">Rezerwacje</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <p>&copy;<span id="year"></span> Forest Group Company Ltd.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
