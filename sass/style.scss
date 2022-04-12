@@ -202,6 +202,9 @@ body {
 		grid-template-rows: repeat(3, 1fr);
 		margin: 0 auto;
 		max-width: 300px;
+		&--custom {
+			grid-template-rows: 1fr;
+		}
 	}
 	&__text {
 		margin: 1em;
@@ -229,12 +232,45 @@ body {
 	}
 	&__text {
 		&--grey {
-			color: $grey;
+			color: $lightgrey;
 		}
 		p {
 			margin: 0.5em 0;
 		}
 	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		padding: 0 2em;
+		& label {
+			line-height: 1.5rem;
+			color: $lightgrey;
+			cursor: pointer;
+		}
+		& input:checked ~ label {
+			color: $black;
+		}
+		& input {
+			position: relative;
+			appearance: none;
+			margin-right: 1em;
+			height: 1em;
+			width: 1em;
+			border: 1px solid $lightgrey;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		& input:checked {
+			border: none;
+		}
+		& input:checked::before {
+			content: url(../img/check.svg);
+			position: absolute;
+			top: -5px;
+			left: -5px;
+		}
+	}
+
 	&__btn {
 		margin: 1em;
 		padding: 0.5em 4em;
@@ -242,11 +278,15 @@ body {
 		background: none;
 		border-radius: 5px;
 		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+		transition: transform 0.3s;
 		cursor: pointer;
 		&--green {
 			background-color: $lightgreen;
 			box-shadow: 0px 2px 5px $lightgreen;
 		}
+	}
+	&__btn:hover {
+		transform: translateY(-5px);
 	}
 }
 .links {
@@ -393,12 +433,9 @@ body {
 		}
 		&__card {
 			margin: 2em 1em;
-		}
-	}
-	.card__btn {
-		transition: transform 0.3s;
-		&:hover {
-			transform: translateY(-5px);
+			&--middle {
+				grid-column: 2/3;
+			}
 		}
 	}
 	.links {

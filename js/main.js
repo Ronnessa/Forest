@@ -7,7 +7,9 @@ function toggleNavigation() {
 	navIcon.classList.toggle('ti-x');
 	navMobile.classList.toggle('nav__items--active');
 	navBtn.classList.add('rotate');
-	setTimeout(() => {navBtn.classList.remove('rotate')}, 400)
+	setTimeout(() => {
+		navBtn.classList.remove('rotate');
+	}, 400);
 
 	if (navMobile.classList.contains('nav__items--active')) {
 		window.addEventListener('scroll', toggleNavigation);
@@ -18,31 +20,53 @@ function toggleNavigation() {
 }
 
 function scrollspy() {
-	const links = document.querySelectorAll('.nav__link');
-	const aboutUs = document.getElementById('aboutus').offsetTop;
-	const offer = document.getElementById('offer').offsetTop
-	const navHeight = document.getElementById('header').offsetTop
+	if (document.getElementById('aboutus')) {
+		const links = document.querySelectorAll('.nav__link');
+		const aboutUs = document.getElementById('aboutus').offsetTop;
+		const offer = document.getElementById('offer').offsetTop;
+		const navHeight = document.getElementById('header').offsetTop;
 
-	const changeClasses = index => {
-		links.forEach(link => link.classList.remove('nav__current'));
-		links[index].classList.add('nav__current');
-	};
+		const changeClasses = index => {
+			links.forEach(link => link.classList.remove('nav__current'));
+			links[index].classList.add('nav__current');
+		};
 
-	if (window.scrollY < aboutUs - navHeight) {
-		changeClasses(0);
-	} else if (window.scrollY >= aboutUs - navHeight && window.scrollY < offer - navHeight) {
-		changeClasses(1);
-	} 
-	else if (window.scrollY >= offer - navHeight){
-		changeClasses(2)
+		if (window.scrollY < aboutUs - navHeight) {
+			changeClasses(0);
+		} else if (window.scrollY >= aboutUs - navHeight && window.scrollY < offer - navHeight) {
+			changeClasses(1);
+		} else if (window.scrollY >= offer - navHeight) {
+			changeClasses(2);
+		}
 	}
 }
 
-(function getYear() {
+function calculatePrice() {
+	const inputs = document.querySelectorAll('.input');
+	let price = 0;
+	
+	function calculate() {
+		const priceText = document.getElementById('price');
+		if (this.checked) {
+			price += parseInt(this.value);
+		} else {
+			price -= parseInt(this.value);
+		}
+		priceText.textContent = `$${price}`
+	}
+
+	inputs.forEach(input => input.addEventListener('change', calculate));
+}
+
+calculatePrice();
+
+function getYear() {
 	const span = document.getElementById('year');
 	const date = new Date();
 	span.textContent = date.getFullYear();
-})();
+}
+
+getYear();
 
 navBtn.addEventListener('click', toggleNavigation);
 window.addEventListener('scroll', scrollspy);

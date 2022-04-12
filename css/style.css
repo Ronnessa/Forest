@@ -274,6 +274,11 @@ body {
   max-width: 300px;
 }
 
+.offer__container--custom {
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
 .offer__text {
   margin: 1em;
   text-align: center;
@@ -312,11 +317,56 @@ body {
 }
 
 .card__text--grey {
-  color: #5c5c5c;
+  color: #bdbcbc;
 }
 
 .card__text p {
   margin: 0.5em 0;
+}
+
+.card__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2em;
+}
+
+.card__form label {
+  line-height: 1.5rem;
+  color: #bdbcbc;
+  cursor: pointer;
+}
+
+.card__form input:checked ~ label {
+  color: #0a0a0a;
+}
+
+.card__form input {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-right: 1em;
+  height: 1em;
+  width: 1em;
+  border: 1px solid #bdbcbc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card__form input:checked {
+  border: none;
+}
+
+.card__form input:checked::before {
+  content: url(../img/check.svg);
+  position: absolute;
+  top: -5px;
+  left: -5px;
 }
 
 .card__btn {
@@ -327,6 +377,10 @@ body {
   border-radius: 5px;
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   cursor: pointer;
 }
 
@@ -334,6 +388,11 @@ body {
   background-color: #2ade72;
   -webkit-box-shadow: 0px 2px 5px #2ade72;
           box-shadow: 0px 2px 5px #2ade72;
+}
+
+.card__btn:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .links__container {
@@ -489,15 +548,10 @@ body {
   .offer__card {
     margin: 2em 1em;
   }
-  .card__btn {
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-  }
-  .card__btn:hover {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+  .offer__card--middle {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
   }
   .links__container {
     -webkit-box-orient: horizontal;
