@@ -9,8 +9,6 @@ importModules();
 
 function addListenerToNav() {
 	const navBtn = document.getElementById('nav-btn');
-	navBtn.addEventListener('click', toggleNavigation);
-
 	function toggleNavigation() {
 		const navMobile = document.getElementById('nav-mobile');
 		const navIcon = document.getElementById('nav-icon');
@@ -29,6 +27,7 @@ function addListenerToNav() {
 		}
 		navMobile.addEventListener('click', toggleNavigation);
 	}
+	navBtn.addEventListener('click', toggleNavigation);
 }
 addListenerToNav();
 
