@@ -3,6 +3,8 @@ function importModules() {
 		import('./modules/scrollspy.js').then(module => window.addEventListener('scroll', module.scrollspy));
 	} else if (document.location.pathname === '/oferta.html') {
 		import('./modules/price.js').then(module => module.calculatePrice());
+	} else if (document.location.pathname === '/kontakt.html') {
+		import('./modules/send-mail.js').then(module => module.sendMail());
 	}
 }
 importModules();

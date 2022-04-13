@@ -50,30 +50,34 @@
             </div>
         </div>
     </header>
-    <main> <section class="section section--map">
+    <main>
+        <section class="section section--map">
             <div class="wrapper">
                 <h2 class="section__heading">Mapa</h2>
                 <p class="section__text">Znajdziesz nas tutaj:</p>
-                <div class="map__container"><iframe class="map" no-referrer src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d639.9708514337639!2d19.892608759684443!3d50.08846978646684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1649794409091!5m2!1spl!2spl" ></iframe></div>
-              
+                <div class="map__container"><iframe class="map" no-referrer
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d639.9708514337639!2d19.892608759684443!3d50.08846978646684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1649794409091!5m2!1spl!2spl"></iframe>
+                </div>
             </div>
         </section>
         <section class="section ">
             <div class="wrapper">
                 <h2 class="section__heading">Kontakt</h2>
                 <p class="section__text">Masz jakieś pytania? Skorzystaj z formularza i skontaktuj się z nami.</p>
-                <form class="contact-form">
+                <form id="form" class="contact-form">
                     <label for="mail">E-mail:</label>
-                    <input id="mail" type="email" placeholder="Wpisz swój adres e-mail" required>
+                    <input id="mail" type="email" placeholder="Wpisz swój adres e-mail" autocomplete="email" required>
                     <label for="title">Temat:</label>
-                    <input id="title" type="text" placeholder="Wpisz temat wiadomości" required>
+                    <input id="title" type="text" placeholder="Wpisz temat wiadomości" required pattern=".*\S+.*"
+                        title="To pole nie może być puste">
                     <label for="message">Wiadomość:</label>
-                    <textarea rows="15" id="message" required></textarea>
-                    <button type="submit" id="send-btn"  >Wyślij</button>
+                    <textarea id="message" rows="10" placeholder="Wpisz swoją wiadomość..." required
+                        minlength=15"></textarea>
+                    <button type="submit">Wyślij</button>
+                    <p id="confirmation-text" class="contact-form__confirmation"></p>
                 </form>
             </div>
         </section>
-       
         <section class="section section--links">
             <div class="wrapper links__container">
                 <p class="links__logo"><img src="./img/christmas-tree.svg" alt="">Forest</p>
