@@ -166,7 +166,7 @@ body {
 		}
 	}
 	&__text {
-		text-align: center;
+		text-align: justify;
 		& h3 {
 			margin: 2em 0 1em;
 			font-size: 1.3rem;
@@ -399,12 +399,20 @@ body {
 			font-size: 2rem;
 		}
 	}
+	.hero-img {
+		&__text {
+			width: 80%;
+		}
+	}
+}
+@media (min-width: 800px){
 	.about-us {
 		&__container {
 			flex-direction: row;
 			align-items: start;
 			& img {
-				width: 50%;
+				width: 45vh;
+				max-width: 45%;
 			}
 		}
 		&__text {
@@ -413,11 +421,6 @@ body {
 			& h3 {
 				margin: 0 0 0.5em 0;
 			}
-		}
-	}
-	.hero-img {
-		&__text {
-			width: 80%;
 		}
 	}
 }
@@ -467,7 +470,8 @@ body {
 	}
 	.about-us {
 		&__container img {
-			width: 45%;
+			width: 50vw;
+			max-width: 45%;
 			margin-right: 1em;
 		}
 		&__text {

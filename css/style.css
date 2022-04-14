@@ -225,7 +225,7 @@ body {
 }
 
 .about-us__text {
-  text-align: center;
+  text-align: justify;
 }
 
 .about-us__text h3 {
@@ -543,6 +543,12 @@ body {
   .header-img__text h1 {
     font-size: 2rem;
   }
+  .hero-img__text {
+    width: 80%;
+  }
+}
+
+@media (min-width: 800px) {
   .about-us__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -553,7 +559,8 @@ body {
             align-items: start;
   }
   .about-us__container img {
-    width: 50%;
+    width: 45vh;
+    max-width: 45%;
   }
   .about-us__text {
     text-align: left;
@@ -561,9 +568,6 @@ body {
   }
   .about-us__text h3 {
     margin: 0 0 0.5em 0;
-  }
-  .hero-img__text {
-    width: 80%;
   }
 }
 
@@ -610,7 +614,8 @@ body {
     font-size: 2.5rem;
   }
   .about-us__container img {
-    width: 45%;
+    width: 50vw;
+    max-width: 45%;
     margin-right: 1em;
   }
   .about-us__text {

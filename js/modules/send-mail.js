@@ -10,7 +10,7 @@ export function sendMail() {
 		email.value = '';
 		title.value = '';
 		message.value = '';
-		confirmationText.textContent = 'Wysłano wiadomosć!';
+		confirmationText.textContent = 'Wysłano wiadomość!';
 	}
 
 	form.addEventListener('submit', event => submitForm(event));
