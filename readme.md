@@ -29,6 +29,6 @@ Website is completed.
 
 ## Sources
 
-- the mockup od the website is made by [MMC School](https://mmcschool.pl/)
+- the mockup of the website is made by [MMC School](https://mmcschool.pl/)
 - all icons come from [Tabler Icons](https://tabler-icons.io/)
 - all images come from [Pixabay](https://pixabay.com/)
