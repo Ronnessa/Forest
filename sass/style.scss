@@ -356,10 +356,10 @@ body {
 	input,
 	textarea,
 	button {
+		-webkit-appearance: none;
 		margin: 0.5em 0 3em;
 		padding: 0.5em;
-		border: none;
-		background: none;
+		border: 0;
 		border-radius: 5px;
 		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 		font-family: 'Montserrat', sans-serif;
@@ -372,6 +372,7 @@ body {
 	button {
 		align-self: start;
 		padding: 0.5em 4em;
+		background: none;
 		transition: transform 0.3s;
 		cursor: pointer;
 		&:hover {

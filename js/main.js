@@ -1,9 +1,9 @@
 function importModules() {
-	if (document.location.pathname === '/index.html') {
+	if (document.location.pathname === '/Forest/index.html' || document.location.pathname === '/Forest/') {
 		import('./modules/scrollspy.js').then(module => window.addEventListener('scroll', module.scrollspy));
-	} else if (document.location.pathname === '/oferta.html') {
+	} else if (document.location.pathname === '/Forest/oferta.html') {
 		import('./modules/price.js').then(module => module.calculatePrice());
-	} else if (document.location.pathname === '/kontakt.html') {
+	} else if (document.location.pathname === '/Forest/kontakt.html') {
 		import('./modules/send-mail.js').then(module => module.sendMail());
 	}
 }
