@@ -127,6 +127,7 @@ body {
   position: relative;
   background: none;
   border: none;
+  color: #0a0a0a;
   cursor: pointer;
 }
 
@@ -381,6 +382,7 @@ body {
   border: none;
   background: none;
   border-radius: 5px;
+  color: #0a0a0a;
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   -webkit-transition: -webkit-transform 0.3s;
@@ -513,6 +515,7 @@ body {
       align-self: start;
   padding: 0.5em 4em;
   background: none;
+  color: #0a0a0a;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
